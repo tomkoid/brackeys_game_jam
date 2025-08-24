@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://co8ggvmptldr"]
+
+[ext_resource type="Script" uid="uid://bfi5pfy1utpub" path="res://Scripts/MovingPlatform.gd" id="1_5olv3"]
+[ext_resource type="Texture2D" uid="uid://bueahf7m1wypa" path="res://Textures/MoneyBag.png" id="1_k502f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k502f"]
+size = Vector2(105, 20)
+
+[node name="MovingPlatform" type="Node2D"]
+scale = Vector2(3, 3)
+script = ExtResource("1_5olv3")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+scale = Vector2(2.76316, 0.275862)
+texture = ExtResource("1_k502f")
+
+[node name="Static Body" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Static Body"]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_k502f")
