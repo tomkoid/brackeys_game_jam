@@ -84,3 +84,7 @@ func _update_animation(input_dir: float) -> void:
 				sprite.play("idle")
 	else:
 		sprite.play("idle")
+
+func get_damage(coins_lost):
+	HUD.update_money(-coins_lost)
+	print(coins_lost)

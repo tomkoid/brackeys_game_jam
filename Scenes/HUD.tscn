@@ -1,12 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://5p8ufukrv5ip"]
+[gd_scene load_steps=5 format=3 uid="uid://5p8ufukrv5ip"]
 
 [ext_resource type="Script" uid="uid://wy0omyrboipg" path="res://Scripts/HUD.gd" id="1_psnte"]
 [ext_resource type="Texture2D" uid="uid://bueahf7m1wypa" path="res://Textures/MoneyBag.png" id="1_sd512"]
 [ext_resource type="FontFile" uid="uid://dil43sbwcg2uc" path="res://Fonts/Main Font.png" id="2_jo1ms"]
 
 [sub_resource type="Theme" id="Theme_psnte"]
-
-[sub_resource type="Theme" id="Theme_s3jbq"]
 
 [node name="HUD" type="CanvasLayer"]
 layer = 2
@@ -16,32 +14,23 @@ script = ExtResource("1_psnte")
 self_modulate = Color(1, 1, 1, 0.298039)
 offset_left = 18.0
 offset_top = 20.0
-offset_right = 99.0
+offset_right = 133.0
 offset_bottom = 80.0
 scale = Vector2(2, 2)
 theme = SubResource("Theme_psnte")
 
-[node name="LeftTop" type="HBoxContainer" parent="Panel"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 4.5
-offset_top = 2.5
-offset_right = 4.5
-offset_bottom = 2.5
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Money Bag" type="Sprite2D" parent="Panel"]
+position = Vector2(6, 3)
 scale = Vector2(0.9, 0.9)
-theme = SubResource("Theme_s3jbq")
-alignment = 2
-
-[node name="Money Bag" type="Sprite2D" parent="Panel/LeftTop"]
 texture = ExtResource("1_sd512")
 centered = false
 
-[node name="Money Count" type="Label" parent="Panel/LeftTop"]
+[node name="Money Count" type="Label" parent="Panel"]
 layout_mode = 2
+offset_left = 44.0
+offset_top = 6.5
+offset_right = 155.0
+offset_bottom = 54.5
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0.84, 0.76944, 0.3108, 1)
 theme_override_colors/font_shadow_color = Color(0.18, 0.171, 0, 1)
@@ -49,4 +38,4 @@ theme_override_constants/shadow_offset_x = 3
 theme_override_constants/shadow_offset_y = 2
 theme_override_fonts/font = ExtResource("2_jo1ms")
 theme_override_font_sizes/font_size = 48
-text = "0"
+text = "000"

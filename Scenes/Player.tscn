@@ -215,6 +215,7 @@ animations = [{
 }]
 
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
+collision_mask = 4
 script = ExtResource("1_g2els")
 
 [node name="Camera2D" type="Camera2D" parent="."]

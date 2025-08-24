@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://w587f5sgglqy"]
+
+[ext_resource type="Texture2D" uid="uid://dbivu6wr3krn2" path="res://Effects/Burning.png" id="1_ajgs5"]
+[ext_resource type="Script" uid="uid://bu08t3jpah6hn" path="res://Scripts/SimpleEnemy.gd" id="1_gwvao"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gwvao"]
+size = Vector2(24.3333, 26.6667)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mv866"]
+
+[node name="Simple Enemy" type="CharacterBody2D"]
+scale = Vector2(3, 3)
+collision_layer = 2
+collision_mask = 4
+script = ExtResource("1_gwvao")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_ajgs5")
+
+[node name="Collider" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_gwvao")
+
+[node name="Hitbox" type="Area2D" parent="."]
+
+[node name="Collider" type="CollisionShape2D" parent="Hitbox"]
+shape = SubResource("RectangleShape2D_mv866")
+debug_color = Color(0.7, 0, 0, 0.419608)
+
+[connection signal="body_entered" from="Hitbox" to="." method="_on_body_entering_hitbox"]
