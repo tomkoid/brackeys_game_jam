@@ -19,11 +19,8 @@ config/icon="res://icon.svg"
 
 Overlay="*res://Scenes/Overlay.tscn"
 Effects="*res://Scenes/Effects.tscn"
-
-run/main_scene="uid://nfbukqlpwn6i"
-config/features=PackedStringArray("4.4", "Forward Plus")
-config/icon="res://icon.svg"
 Text="*res://Scenes/Text.tscn"
+HUD="*res://Scenes/HUD.tscn"
 
 [global_group]
 

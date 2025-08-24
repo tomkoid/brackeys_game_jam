@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://csopy8v4ys8qa"
-path="res://.godot/imported/SlotMachine.png-18d5f6d01fe21afd16623b378d4c25f8.ctex"
+uid="uid://bueahf7m1wypa"
+path="res://.godot/imported/MoneyBag.png-993a19a55c6124c9ef83f444282aa3fb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Textures/SlotMachine.png"
-dest_files=["res://.godot/imported/SlotMachine.png-18d5f6d01fe21afd16623b378d4c25f8.ctex"]
+source_file="res://Textures/MoneyBag.png"
+dest_files=["res://.godot/imported/MoneyBag.png-993a19a55c6124c9ef83f444282aa3fb.ctex"]
 
 [params]
 
