@@ -4,7 +4,6 @@ extends CharacterBody2D
 const SPEED = 530.0
 const JUMP_VELOCITY = -500.0
 
-
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
@@ -18,8 +17,14 @@ func _physics_process(delta: float) -> void:
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction := Input.get_axis("left", "right")
 	if direction:
+		if direction == -1:
+			$ASS2D.flip_h = true
+		if direction == 1:
+			$ASS2D.flip_h = false
+		$ASS2D.animation = "run"
 		velocity.x = direction * SPEED
 	else:
+		$ASS2D.animation = "idle"
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
