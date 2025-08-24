@@ -37,7 +37,7 @@ func _physics_process(delta: float) -> void:
 		velocity.y = wall_slide_speed
 
 	# ---- SKOK ----
-	if Input.is_action_just_pressed("ui_accept"):
+	if Input.is_action_just_pressed("jump"):
 		if is_on_floor():
 			velocity.y = jump_velocity
 		elif on_left_wall or on_right_wall:
@@ -52,7 +52,6 @@ func _physics_process(delta: float) -> void:
 
 	# ---- ANIMACE ----
 	_update_animation(input_dir)
-	print("Left:", on_left_wall, "Right:", on_right_wall)
 
 func _update_animation(input_dir: float) -> void:
 	# Otočení podle směru pohybu
