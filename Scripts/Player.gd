@@ -42,7 +42,8 @@ func _physics_process(delta: float) -> void:
 	var on_wall := on_left_wall or on_right_wall
 
 	if on_wall and velocity.y > wall_slide_speed:
-		velocity.y = wall_slide_speed
+		if Input.is_action_pressed("left") or Input.is_action_pressed("right"):
+			velocity.y = wall_slide_speed
 
 	# ---- SKOK ----
 	if Input.is_action_just_pressed("jump"):

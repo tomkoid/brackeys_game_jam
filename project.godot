@@ -54,8 +54,11 @@ interact={
 
 [physics]
 
+common/physics_ticks_per_second=360
 2d/default_gravity=1300.0
 
 [rendering]
 
-textures/canvas_textures/default_texture_filter=0
+textures/canvas_textures/default_texture_filter=3
+anti_aliasing/quality/msaa_2d=2
+anti_aliasing/quality/msaa_3d=2
