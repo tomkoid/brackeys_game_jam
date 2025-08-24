@@ -1,13 +1,35 @@
-[gd_scene format=3 uid="uid://bed6bto7kcnho"]
+[gd_scene load_steps=5 format=3 uid="uid://c847fosm4kbqo"]
+
+[ext_resource type="Texture2D" uid="uid://dm7j6ogm6yxh7" path="res://Assets/slot_machine_empty.png" id="1_xfkh8"]
+[ext_resource type="Texture2D" uid="uid://brn8tv44xmx6s" path="res://Assets/slot_machine_coin.png" id="2_imq87"]
+[ext_resource type="Texture2D" uid="uid://dagweia0peh5o" path="res://Assets/slot_machine_cherry.png" id="3_rty01"]
+[ext_resource type="Texture2D" uid="uid://bhn6kv1fro2ew" path="res://Assets/slot_machine_(six)seven.png" id="4_43xx0"]
 
 [node name="Gamble" type="CanvasLayer"]
 
-[node name="ColorRect" type="ColorRect" parent="."]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 1)
+[node name="SlotMachineEmpty" type="Sprite2D" parent="."]
+position = Vector2(548, 322)
+scale = Vector2(10.6918, 10.7158)
+texture = ExtResource("1_xfkh8")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="random_element_1" type="Sprite2D" parent="SlotMachineEmpty"]
+position = Vector2(-25, 4)
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("2_imq87")
+
+[node name="random_element_2" type="Sprite2D" parent="SlotMachineEmpty"]
+position = Vector2(-4, 3.567)
+scale = Vector2(0.854324, 0.84332)
+texture = ExtResource("3_rty01")
+
+[node name="random_element_3" type="Sprite2D" parent="SlotMachineEmpty"]
+position = Vector2(17, 5)
+texture = ExtResource("4_43xx0")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -1
+offset_left = -216.0
+offset_top = -163.0
+offset_right = 1554.0
+offset_bottom = 889.0
+color = Color(0, 0, 0, 1)

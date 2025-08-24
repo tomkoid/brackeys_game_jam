@@ -3,7 +3,7 @@
 [ext_resource type="TileSet" uid="uid://dj2m2g4467w7e" path="res://Assets/world.tres" id="3_0b4ue"]
 [ext_resource type="PackedScene" uid="uid://co8ggvmptldr" path="res://Scenes/MovingPlatform.tscn" id="3_f2txt"]
 [ext_resource type="PackedScene" uid="uid://qfvbj3pph5dy" path="res://Scenes/SlotMachine.tscn" id="3_oi3di"]
-[ext_resource type="PackedScene" uid="uid://db1k15s4udbdu" path="res://Scenes/Coin.tscn" id="4_0b4ue"]
+[ext_resource type="PackedScene" path="res://Scenes/Coin.tscn" id="4_0b4ue"]
 
 [node name="Node2D" type="Node2D"]
 
