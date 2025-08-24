@@ -5,6 +5,7 @@
 [ext_resource type="FontFile" uid="uid://dil43sbwcg2uc" path="res://Fonts/Main Font.png" id="2_jo1ms"]
 
 [node name="HUD" type="CanvasLayer"]
+layer = 2
 script = ExtResource("1_psnte")
 
 [node name="Money Bag" type="Sprite2D" parent="."]
