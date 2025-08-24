@@ -1,7 +1,57 @@
-[gd_scene load_steps=4 format=3 uid="uid://qfvbj3pph5dy"]
+[gd_scene load_steps=9 format=3 uid="uid://qfvbj3pph5dy"]
 
-[ext_resource type="Texture2D" uid="uid://csopy8v4ys8qa" path="res://Textures/SlotMachine.png" id="1_8qfso"]
 [ext_resource type="Script" uid="uid://cklgflemt6ew0" path="res://Scripts/SlotMachine.gd" id="1_bstdy"]
+[ext_resource type="Texture2D" uid="uid://cnct0qduvtael" path="res://Assets/slotmachine-sh1.png" id="2_bstdy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_12ai4"]
+atlas = ExtResource("2_bstdy")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1mqkx"]
+atlas = ExtResource("2_bstdy")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1n4jc"]
+atlas = ExtResource("2_bstdy")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ymylu"]
+atlas = ExtResource("2_bstdy")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_46fj6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_12ai4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1mqkx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1n4jc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ymylu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1n4jc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1mqkx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_12ai4")
+}],
+"loop": false,
+"name": &"button",
+"speed": 9.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8qfso"]
 size = Vector2(309, 265)
@@ -9,10 +59,11 @@ size = Vector2(309, 265)
 [node name="SlotMachine" type="Node2D"]
 script = ExtResource("1_bstdy")
 
-[node name="Sprite" type="Sprite2D" parent="."]
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
 z_index = -1
-scale = Vector2(0.301563, 0.302539)
-texture = ExtResource("1_8qfso")
+scale = Vector2(4, 4.012)
+sprite_frames = SubResource("SpriteFrames_46fj6")
+animation = &"button"
 
 [node name="Interact Area" type="Area2D" parent="."]
 

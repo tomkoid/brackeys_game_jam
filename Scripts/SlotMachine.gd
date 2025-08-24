@@ -18,6 +18,7 @@ func _on_exit_interaction_area(body: Node2D) -> void:
 func _unhandled_input(_event):
 	if Input.is_action_just_pressed("interact") and can_interact():
 		print("INTERACTS WITH SLOT MACHINE")
+		$Sprite.play("button")
 		pass
 
 func can_interact():
