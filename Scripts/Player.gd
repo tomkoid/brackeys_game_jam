@@ -83,5 +83,4 @@ func _update_animation(input_dir: float) -> void:
 			if sprite.animation != "idle":
 				sprite.play("idle")
 	else:
-		# ve vzduchu necháme poslední animaci (run/idle)
-		pass
+		sprite.play("idle")
