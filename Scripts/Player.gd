@@ -17,6 +17,7 @@ extends CharacterBody2D
 
 var _facing: int = 1
 var physics_disabled := false
+var invunerability := false
 
 func _process(delta: float):
 	effect_particle.emitting = Effects.has_any_effects()
@@ -85,6 +86,16 @@ func _update_animation(input_dir: float) -> void:
 	else:
 		sprite.play("idle")
 
+var hurt_tween_duration = 0.2
+
 func get_damage(coins_lost):
+	if invunerability: return
+	Audio.play("Hurt", 0.2)
+	invunerability = true
 	HUD.update_money(-coins_lost)
-	print(coins_lost)
+	camera.screen_shake_multiple(3)
+	var hurt_tween = create_tween().tween_property(self, "modulate", Color.RED, hurt_tween_duration)
+	await hurt_tween.finished
+	var undo_color_tween = create_tween().tween_property(self, "modulate", Color.WHITE, hurt_tween_duration)
+	await undo_color_tween.finished
+	invunerability = false

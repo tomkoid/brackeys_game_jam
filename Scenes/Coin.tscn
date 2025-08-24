@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://db1k15s4udbdu"]
+[gd_scene load_steps=17 format=3 uid="uid://bku1np2r3133j"]
 
 [ext_resource type="Texture2D" uid="uid://bsgkb03uw5vj3" path="res://Assets/brackeys_platformer_assets/sprites/coin.png" id="1_qrc3l"]
 [ext_resource type="Script" uid="uid://bxsqmt3lhxno5" path="res://Scripts/Coin.gd" id="1_wjfxq"]

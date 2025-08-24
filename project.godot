@@ -22,6 +22,7 @@ Effects="*res://Scenes/Effects.tscn"
 Text="*res://Scenes/Text.tscn"
 HUD="*res://Scenes/HUD.tscn"
 Player="*res://Scenes/Player.tscn"
+Audio="*res://Scenes/Audio.tscn"
 
 [global_group]
 

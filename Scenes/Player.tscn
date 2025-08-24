@@ -1,6 +1,7 @@
-[gd_scene load_steps=33 format=3 uid="uid://cro1rju0k4bel"]
+[gd_scene load_steps=34 format=3 uid="uid://cro1rju0k4bel"]
 
 [ext_resource type="Script" uid="uid://b1i7wksa868ig" path="res://Scripts/Player.gd" id="1_g2els"]
+[ext_resource type="Script" uid="uid://b110suik7dmds" path="res://Scripts/CameraManager.gd" id="2_dewec"]
 [ext_resource type="Texture2D" uid="uid://cusovjcj0m750" path="res://Assets/brackeys_platformer_assets/sprites/knight.png" id="2_kyqiw"]
 [ext_resource type="PackedScene" uid="uid://csa2j8320hg6f" path="res://Scenes/Effect Particle.tscn" id="3_2feor"]
 
@@ -222,6 +223,7 @@ script = ExtResource("1_g2els")
 process_callback = 0
 position_smoothing_enabled = true
 position_smoothing_speed = 8.0
+script = ExtResource("2_dewec")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 8)
