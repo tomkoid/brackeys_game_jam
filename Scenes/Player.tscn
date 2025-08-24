@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cusovjcj0m750" path="res://Assets/brackeys_platformer_assets/sprites/knight.png" id="2_kyqiw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g2els"]
+size = Vector2(7.38462, 12.3077)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yoq75"]
 atlas = ExtResource("2_kyqiw")
@@ -220,11 +221,12 @@ position_smoothing_enabled = true
 position_smoothing_speed = 4.585
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 8)
 scale = Vector2(6.5, 6.5)
 shape = SubResource("RectangleShape2D_g2els")
 
 [node name="ASS2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(4.025, 4.025)
 sprite_frames = SubResource("SpriteFrames_lyrkg")
-animation = &"landing"
-frame_progress = 0.151887
+animation = &"idle"
+frame_progress = 0.495036
