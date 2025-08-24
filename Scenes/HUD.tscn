@@ -1,11 +1,26 @@
-[gd_scene load_steps=4 format=3 uid="uid://5p8ufukrv5ip"]
+[gd_scene load_steps=6 format=3 uid="uid://5p8ufukrv5ip"]
 
 [ext_resource type="Script" uid="uid://wy0omyrboipg" path="res://Scripts/HUD.gd" id="1_psnte"]
 [ext_resource type="Texture2D" uid="uid://bueahf7m1wypa" path="res://Textures/MoneyBag.png" id="1_sd512"]
 [ext_resource type="FontFile" uid="uid://dil43sbwcg2uc" path="res://Fonts/Main Font.png" id="2_jo1ms"]
+[ext_resource type="Shader" uid="uid://dlajq3c4d2nbr" path="res://Shaders/screen.gdshader" id="2_s3jbq"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_psnte"]
+shader = ExtResource("2_s3jbq")
+shader_parameter/levels = 3
+shader_parameter/spread = 0.008
+shader_parameter/fov_strength = -0.12
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_psnte")
+
+[node name="ScreenShader" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_psnte")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Money Bag" type="Sprite2D" parent="."]
 position = Vector2(91, 89)

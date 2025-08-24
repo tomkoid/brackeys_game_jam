@@ -1,0 +1,14 @@
+[remap]
+
+importer="glsl"
+type="RDShaderFile"
+uid="uid://dlajq3c4d2nbr"
+path="res://.godot/imported/lens_distort.glsl-6c97585a8a94f118f39772638a3f49a5.res"
+
+[deps]
+
+source_file="res://Shaders/lens_distort.glsl"
+dest_files=["res://.godot/imported/lens_distort.glsl-6c97585a8a94f118f39772638a3f49a5.res"]
+
+[params]
+
