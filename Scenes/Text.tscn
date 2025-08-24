@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://bcrahlxna3q2v"]
+
+[ext_resource type="Script" uid="uid://byphime3bt8ym" path="res://Scripts/Text.gd" id="1_aymh6"]
+[ext_resource type="FontFile" uid="uid://dil43sbwcg2uc" path="res://Fonts/Main Font.png" id="1_yjwyh"]
+
+[node name="Text" type="CanvasLayer"]
+script = ExtResource("1_aymh6")
+
+[node name="Label" type="Label" parent="."]
+offset_top = 700.0
+offset_right = 1152.0
+offset_bottom = 784.0
+theme_override_colors/font_shadow_color = Color(0.08, 0.08, 0.08, 1)
+theme_override_colors/font_outline_color = Color(0.07, 0.07, 0.07, 1)
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 4
+theme_override_fonts/font = ExtResource("1_yjwyh")
+theme_override_font_sizes/font_size = 64
+text = "Press ENTER to get crazy rewards!"
+horizontal_alignment = 1
+vertical_alignment = 1

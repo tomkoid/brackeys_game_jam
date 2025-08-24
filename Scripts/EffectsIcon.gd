@@ -1,7 +1,7 @@
 extends Node2D
 
-@onready var icon = $Background/Icon
-@onready var time = $Time
+@onready var icon = $CanvasLayer/Background/Icon
+@onready var time = $CanvasLayer/Time
 
 func set_icon_texture(texture):
 	icon.texture = texture

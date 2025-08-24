@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 
 const SPEED = 530.0
-const JUMP_VELOCITY = -500.0
+const JUMP_VELOCITY = -600.0
 
 @onready var ass2d = $ASS2D
 

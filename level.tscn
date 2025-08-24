@@ -1,8 +1,8 @@
-[gd_scene load_steps=7 format=4 uid="uid://nfbukqlpwn6i"]
+[gd_scene load_steps=5 format=4 uid="uid://b68neqhxebs03"]
 
-[ext_resource type="PackedScene" uid="uid://dwto03r8ufx6t" path="res://Scenes/Player.tscn" id="1_o5qli"]
+[ext_resource type="PackedScene" uid="uid://cro1rju0k4bel" path="res://Scenes/Player.tscn" id="1_o5qli"]
 [ext_resource type="Texture2D" uid="uid://bsgkb03uw5vj3" path="res://Assets/brackeys_platformer_assets/sprites/coin.png" id="2_vonw3"]
-[ext_resource type="Texture2D" uid="uid://rqf8rqqnojhg" path="res://platforms.png" id="3_oi3di"]
+[ext_resource type="PackedScene" uid="uid://qfvbj3pph5dy" path="res://Scenes/SlotMachine.tscn" id="3_oi3di"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oi3di"]
 size = Vector2(612, 78)
@@ -79,4 +79,6 @@ shape = SubResource("RectangleShape2D_oi3di")
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 scale = Vector2(2, 2)
 tile_map_data = PackedByteArray("AAD+/wUAAAAAAAAAAAD//wUAAAAAAAAAAAAAAAUAAAAAAAAAAAABAAUAAAAAAAAAAAACAAUAAAAAAAAAAAADAAUAAAAAAAAAAAAEAAUAAAAAAAAAAAAFAAUAAAAAAAAAAAAGAAUAAAAAAAAAAAAHAAUAAAAAAAAAAAAIAAUAAAAAAAAAAAAJAAUAAAAAAAAAAAAKAAUAAAAAAAAAAAALAAUAAAAAAAAAAAAMAAUAAAAAAAAAAAANAAYAAAAAAAAAAAAOAAYAAAAAAAAAAAAPAAYAAAAAAAAAAAAQAAYAAAAAAAAAAAARAAYAAAAAAAAAAAASAAYAAAAAAAAAAAATAAYAAAAAAAAAAAD//wIAAAAAAAAAAAD+/wIAAAAAAAAAAAD9/wIAAAAAAAAAAAD8/wIAAAAAAAAAAAD7/wEAAAAAAAAAAAD6/wEAAAAAAAAAAAD5/wEAAAAAAAAAAAA=")
-tile_set = SubResource("TileSet_f2txt")
+
+[node name="SlotMachine" parent="." instance=ExtResource("3_oi3di")]
+position = Vector2(582, 353)

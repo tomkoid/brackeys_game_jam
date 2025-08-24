@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://dwto03r8ufx6t"]
+[gd_scene load_steps=32 format=3 uid="uid://cro1rju0k4bel"]
 
 [ext_resource type="Script" uid="uid://b1i7wksa868ig" path="res://Scripts/Player.gd" id="1_g2els"]
 [ext_resource type="Texture2D" uid="uid://cusovjcj0m750" path="res://Assets/brackeys_platformer_assets/sprites/knight.png" id="2_kyqiw"]
@@ -213,7 +213,7 @@ animations = [{
 "speed": 10.0
 }]
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["Player"]]
 script = ExtResource("1_g2els")
 
 [node name="Camera2D" type="Camera2D" parent="."]

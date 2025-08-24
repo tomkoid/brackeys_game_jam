@@ -8,12 +8,6 @@ enum Effect {
 	Burning
 }
 
-func _ready():
-	update_effect(Effect.Poison, 5)
-	await get_tree().create_timer(2).timeout
-	update_effect(Effect.Poison, 2)
-	update_effect(Effect.Burning, 2)
-
 func _process(delta: float):
 	update_effect_durations(delta)
 
