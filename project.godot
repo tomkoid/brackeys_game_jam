@@ -21,6 +21,7 @@ Overlay="*res://Scenes/Overlay.tscn"
 Effects="*res://Scenes/Effects.tscn"
 Text="*res://Scenes/Text.tscn"
 HUD="*res://Scenes/HUD.tscn"
+Player="*res://Scenes/Player.tscn"
 
 [global_group]
 

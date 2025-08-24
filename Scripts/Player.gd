@@ -13,8 +13,10 @@ extends CharacterBody2D
 @onready var ray_right: RayCast2D = $RayRight
 @onready var sprite: AnimatedSprite2D = $ASS2D # ⚡ tady připojíme AnimatedSprite2D
 @onready var effect_particle: CPUParticles2D = $"Effect Particle"
+@onready var camera: Camera2D = $Camera2D
 
 var _facing: int = 1
+var physics_disabled := false
 
 func _process(delta: float):
 	effect_particle.emitting = Effects.has_any_effects()
@@ -22,6 +24,7 @@ func _process(delta: float):
 	if particle_color != null: effect_particle.modulate = particle_color
 
 func _physics_process(delta: float) -> void:
+	if physics_disabled: return
 	# ---- VSTUP ----
 	var input_dir := Input.get_action_strength("right") - Input.get_action_strength("left")
 	if input_dir != 0:
@@ -80,5 +83,4 @@ func _update_animation(input_dir: float) -> void:
 			if sprite.animation != "idle":
 				sprite.play("idle")
 	else:
-		# ve vzduchu necháme poslední animaci (run/idle)
-		pass
+		sprite.play("idle")

@@ -1,14 +1,10 @@
 [gd_scene load_steps=5 format=4 uid="uid://b68neqhxebs03"]
 
-[ext_resource type="PackedScene" uid="uid://cro1rju0k4bel" path="res://Scripts/Player.tscn" id="1_o5qli"]
 [ext_resource type="TileSet" uid="uid://dj2m2g4467w7e" path="res://Assets/world.tres" id="3_0b4ue"]
 [ext_resource type="PackedScene" uid="uid://qfvbj3pph5dy" path="res://Scenes/SlotMachine.tscn" id="3_oi3di"]
 [ext_resource type="PackedScene" uid="uid://db1k15s4udbdu" path="res://Scenes/Coin.tscn" id="4_0b4ue"]
 
 [node name="Node2D" type="Node2D"]
-
-[node name="Player" parent="." instance=ExtResource("1_o5qli")]
-position = Vector2(235, -14)
 
 [node name="TileMapLayer2" type="TileMapLayer" parent="."]
 z_index = -1
