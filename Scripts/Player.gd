@@ -4,6 +4,8 @@ extends CharacterBody2D
 const SPEED = 530.0
 const JUMP_VELOCITY = -500.0
 
+@onready var ass2d = $ASS2D
+
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
@@ -18,13 +20,13 @@ func _physics_process(delta: float) -> void:
 	var direction := Input.get_axis("left", "right")
 	if direction:
 		if direction == -1:
-			$ASS2D.flip_h = true
+			ass2d.flip_h = true
 		if direction == 1:
-			$ASS2D.flip_h = false
-		$ASS2D.animation = "run"
+			ass2d.flip_h = false
+		ass2d.play("run")
 		velocity.x = direction * SPEED
 	else:
-		$ASS2D.animation = "idle"
+		ass2d.play("idle")
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
