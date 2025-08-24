@@ -19,6 +19,8 @@ func _unhandled_input(_event):
 	if Input.is_action_just_pressed("interact") and can_interact():
 		print("INTERACTS WITH SLOT MACHINE")
 		$Sprite.play("button")
+		await get_tree().create_timer(1.0).timeout
+		get_tree().change_scene_to_file("res://Scenes/Gamble.tscn")
 		pass
 
 func can_interact():
