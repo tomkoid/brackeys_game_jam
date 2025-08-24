@@ -7,9 +7,10 @@
 script = ExtResource("1_aymh6")
 
 [node name="Label" type="Label" parent="."]
-offset_top = 700.0
-offset_right = 1152.0
-offset_bottom = 784.0
+anchors_preset = -1
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
 theme_override_colors/font_shadow_color = Color(0.08, 0.08, 0.08, 1)
 theme_override_colors/font_outline_color = Color(0.07, 0.07, 0.07, 1)
 theme_override_constants/shadow_offset_x = 8
@@ -19,3 +20,4 @@ theme_override_font_sizes/font_size = 64
 text = "Press ENTER to get crazy rewards!"
 horizontal_alignment = 1
 vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
