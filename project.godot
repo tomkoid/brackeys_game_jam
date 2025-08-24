@@ -11,17 +11,13 @@ config_version=5
 [application]
 
 config/name="brackeys_game_jam"
-run/main_scene="uid://nfbukqlpwn6i"
+run/main_scene="res://Scenes/Effects.tscn"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
-<<<<<<<HEADrun/main_scene="res://Scenes/Effects.tscn"
 
 [autoload]
 
 Effects="*res://Scenes/Effects.tscn"
-run/main_scene="uid://nfbukqlpwn6i"
-config/features=PackedStringArray("4.4", "Forward Plus")
-config/icon="res://icon.svg"
 
 [input]
 
@@ -42,6 +38,10 @@ jump={
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":32,"key_label":0,"unicode":32,"location":0,"echo":false,"script":null)
 ]
 }
+
+[physics]
+
+2d/default_gravity=1300.0
 
 [rendering]
 
