@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://csa2j8320hg6f"]
+
+[ext_resource type="Texture2D" uid="uid://dds4hl4o2pil0" path="res://Textures/Particle.png" id="1_x3big"]
+
+[sub_resource type="Curve" id="Curve_00lwa"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.988701, 0.421597), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[node name="Effect Particle" type="CPUParticles2D"]
+light_mask = 0
+z_index = -1
+amount = 5
+texture = ExtResource("1_x3big")
+lifetime = 0.8
+explosiveness = 0.1
+randomness = 1.0
+direction = Vector2(0, 0)
+spread = 180.0
+gravity = Vector2(0, -200)
+initial_velocity_min = 20.0
+initial_velocity_max = 100.0
+angular_velocity_min = 20.0
+angular_velocity_max = 100.0
+scale_amount_min = 5.0
+scale_amount_max = 5.0
+scale_amount_curve = SubResource("Curve_00lwa")

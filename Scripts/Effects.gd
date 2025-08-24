@@ -2,17 +2,25 @@ extends Node2D
 
 var ongoing_effects : Dictionary[Effect, float] = {}
 var effects_scenes := {}
+var latest_updated_effect = null
 
 enum Effect {
 	Poison,
-	Burning
+	Burning,
+	JumpBoost
 }
+
+func _ready():
+	update_effect(Effect.JumpBoost, 5)
 
 func _process(delta: float):
 	update_effect_durations(delta)
 
 func has_effect(effect: Effect):
 	return effect in ongoing_effects
+
+func has_any_effects():
+	return ongoing_effects.size() > 0
 
 func get_effect_count():
 	return ongoing_effects.size()
@@ -44,8 +52,13 @@ func update_effect(effect: Effect, update_duration_by: float):
 	add_child(effect_instance)
 	effect_instance.set_icon_texture(get_effect_icon(effect))
 	effects_scenes[effect] = effect_instance
+	latest_updated_effect = effect
 
 func get_effect_icon(effect: Effect):
 	var effect_name = Effect.find_key(effect)
 	var effect_path = "res://Effects/" + effect_name + ".png"
 	return load(effect_path)
+
+func get_effect_color(effect):
+	match effect:
+		Effect.JumpBoost: return Color("6dffff")

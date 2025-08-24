@@ -12,9 +12,14 @@ extends CharacterBody2D
 @onready var ray_left: RayCast2D  = $RayLeft
 @onready var ray_right: RayCast2D = $RayRight
 @onready var sprite: AnimatedSprite2D = $ASS2D # ⚡ tady připojíme AnimatedSprite2D
+@onready var effect_particle: CPUParticles2D = $"Effect Particle"
 
 var _facing: int = 1
 
+func _process(delta: float):
+	effect_particle.emitting = Effects.has_any_effects()
+	var particle_color = Effects.get_effect_color(Effects.latest_updated_effect)
+	if particle_color != null: effect_particle.modulate = particle_color
 
 func _physics_process(delta: float) -> void:
 	# ---- VSTUP ----
@@ -38,20 +43,27 @@ func _physics_process(delta: float) -> void:
 
 	# ---- SKOK ----
 	if Input.is_action_just_pressed("jump"):
-		if is_on_floor():
-			velocity.y = jump_velocity
-		elif on_left_wall or on_right_wall:
-			var push_dir = 0
-			if on_left_wall: push_dir = 1
-			if on_right_wall: push_dir = -1
-			velocity.x = push_dir * wall_jump_push
-			velocity.y = wall_jump_boost
+		player_jump(on_left_wall, on_right_wall)
 
 	# ---- POHYB ----
 	move_and_slide()
 
 	# ---- ANIMACE ----
 	_update_animation(input_dir)
+
+const jump_boost_multiplier = 1.5
+
+func player_jump(on_left_wall, on_right_wall):
+	if is_on_floor():
+		var jump_multiplier = 1
+		if Effects.has_effect(Effects.Effect.JumpBoost): jump_multiplier = jump_boost_multiplier
+		velocity.y = jump_velocity * jump_multiplier
+	elif on_left_wall or on_right_wall:
+		var push_dir = 0
+		if on_left_wall: push_dir = 1
+		if on_right_wall: push_dir = -1
+		velocity.x = push_dir * wall_jump_push
+		velocity.y = wall_jump_boost
 
 func _update_animation(input_dir: float) -> void:
 	# Otočení podle směru pohybu

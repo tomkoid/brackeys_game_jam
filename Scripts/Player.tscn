@@ -1,7 +1,8 @@
-[gd_scene load_steps=32 format=3 uid="uid://cro1rju0k4bel"]
+[gd_scene load_steps=33 format=3 uid="uid://cro1rju0k4bel"]
 
 [ext_resource type="Script" uid="uid://b1i7wksa868ig" path="res://Scripts/Player.gd" id="1_g2els"]
 [ext_resource type="Texture2D" uid="uid://cusovjcj0m750" path="res://Assets/brackeys_platformer_assets/sprites/knight.png" id="2_kyqiw"]
+[ext_resource type="PackedScene" uid="uid://csa2j8320hg6f" path="res://Scenes/Effect Particle.tscn" id="3_2feor"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g2els"]
 size = Vector2(7.38462, 12.3077)
@@ -236,3 +237,5 @@ target_position = Vector2(-40, 0)
 
 [node name="RayRight" type="RayCast2D" parent="."]
 target_position = Vector2(40, 0)
+
+[node name="Effect Particle" parent="." instance=ExtResource("3_2feor")]
