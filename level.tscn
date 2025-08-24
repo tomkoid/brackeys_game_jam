@@ -1,68 +1,21 @@
-[gd_scene load_steps=5 format=4 uid="uid://b68neqhxebs03"]
+[gd_scene load_steps=4 format=4 uid="uid://b68neqhxebs03"]
 
 [ext_resource type="PackedScene" uid="uid://cro1rju0k4bel" path="res://Scripts/Player.tscn" id="1_o5qli"]
-[ext_resource type="Texture2D" uid="uid://bsgkb03uw5vj3" path="res://Assets/brackeys_platformer_assets/sprites/coin.png" id="2_vonw3"]
+[ext_resource type="TileSet" uid="uid://dj2m2g4467w7e" path="res://Assets/world.tres" id="3_0b4ue"]
 [ext_resource type="PackedScene" uid="uid://qfvbj3pph5dy" path="res://Scenes/SlotMachine.tscn" id="3_oi3di"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_oi3di"]
-size = Vector2(612, 78)
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_o5qli")]
 position = Vector2(235, -14)
 
-[node name="StaticBody2D4" type="StaticBody2D" parent="."]
-position = Vector2(-130, 252)
-rotation = 1.5708
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
-shape = SubResource("RectangleShape2D_oi3di")
-
-[node name="TextureRect" type="TextureRect" parent="StaticBody2D4"]
-offset_left = -306.0
-offset_top = -64.0
-offset_right = 304.0
-offset_bottom = 64.0
-texture = ExtResource("2_vonw3")
-metadata/_edit_use_anchors_ = true
-
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2(300, 678.57)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-shape = SubResource("RectangleShape2D_oi3di")
-
-[node name="TextureRect" type="TextureRect" parent="StaticBody2D"]
-offset_left = -306.0
-offset_top = -64.0
-offset_right = 304.0
-offset_bottom = 64.0
-texture = ExtResource("2_vonw3")
-
-[node name="StaticBody2D2" type="StaticBody2D" parent="."]
-position = Vector2(690.313, 550)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
-shape = SubResource("RectangleShape2D_oi3di")
-
-[node name="TextureRect" type="TextureRect" parent="StaticBody2D2"]
-offset_left = -306.0
-offset_top = -64.0
-offset_right = 304.0
-offset_bottom = 64.0
-texture = ExtResource("2_vonw3")
-
-[node name="StaticBody2D3" type="StaticBody2D" parent="."]
-position = Vector2(1000, 300)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
-position = Vector2(-9, 98)
-shape = SubResource("RectangleShape2D_oi3di")
-
-[node name="TileMapLayer" type="TileMapLayer" parent="."]
-scale = Vector2(2, 2)
-tile_map_data = PackedByteArray("AAD+/wUAAAAAAAAAAAD//wUAAAAAAAAAAAAAAAUAAAAAAAAAAAABAAUAAAAAAAAAAAACAAUAAAAAAAAAAAADAAUAAAAAAAAAAAAEAAUAAAAAAAAAAAAFAAUAAAAAAAAAAAAGAAUAAAAAAAAAAAAHAAUAAAAAAAAAAAAIAAUAAAAAAAAAAAAJAAUAAAAAAAAAAAAKAAUAAAAAAAAAAAALAAUAAAAAAAAAAAAMAAUAAAAAAAAAAAANAAYAAAAAAAAAAAAOAAYAAAAAAAAAAAAPAAYAAAAAAAAAAAAQAAYAAAAAAAAAAAARAAYAAAAAAAAAAAASAAYAAAAAAAAAAAATAAYAAAAAAAAAAAD//wIAAAAAAAAAAAD+/wIAAAAAAAAAAAD9/wIAAAAAAAAAAAD8/wIAAAAAAAAAAAD7/wEAAAAAAAAAAAD6/wEAAAAAAAAAAAD5/wEAAAAAAAAAAAA=")
+[node name="TileMapLayer2" type="TileMapLayer" parent="."]
+z_index = -1
+position = Vector2(2, 0)
+scale = Vector2(4, 4)
+tile_map_data = PackedByteArray("AAD6/wgAAAABAAAAAAD7/wgAAAABAAAAAAD8/wgAAAABAAAAAAD9/wgAAAABAAAAAAD+/wgAAAABAAAAAAD//wgAAAABAAAAAAAAAAgAAAABAAAAAAABAAgAAAABAAAAAAACAAgAAAABAAAAAAADAAgAAAABAAAAAAAEAAgAAAABAAAAAAAFAAgAAAABAAAAAAD5//z/AAABAAAAAAD5//3/AAABAAAAAAD5//7/AAABAAAAAAD5////AAABAAAAAAD5/wAAAAABAAAAAAD5/wEAAAABAAAAAAD5/wIAAAABAAAAAAD5/wMAAAABAAAAAAD5/wQAAAABAAAAAAD5/wUAAAABAAAAAAD5/wYAAAABAAAAAAD5/wcAAAABAAAAAAD5/wgAAAABAAAAAAARAAgAAAABAAAAAAAQAAgAAAABAAAAAAAPAAgAAAABAAAAAAAOAAgAAAABAAAAAAANAAgAAAABAAAAAAAMAAgAAAABAAAAAAALAAgAAAABAAAAAAAKAAgAAAABAAAAAAAJAAgAAAABAAAAAAAIAAgAAAABAAAAAAAHAAgAAAABAAAAAAAGAAgAAAABAAAAAAAAAAQAAAABAAAAAAABAAQAAAABAAAAAAACAAQAAAABAAAAAAAMAAIAAAABAAAAAAANAAIAAAABAAAAAAAOAAIAAAABAAAAAAAPAAIAAAABAAAAAAAQAAIAAAABAAAAAAASAAgAAAABAAAAAAASAAcAAAABAAAAAAASAAYAAAABAAAAAAASAAUAAAABAAAAAAATAAQAAAABAAAAAAATAAMAAAABAAAAAAATAAIAAAABAAAAAAATAAEAAAABAAAAAAATAAAAAAABAAAAAAATAP//AAABAAAAAAATAP7/AAABAAAAAAATAP3/AAABAAAAAAACAAcAAAABAAMAAAABAAcAAAABAAMAAAAAAAcAAAABAAMAAAD//wcAAAABAAMAAAD+/wcAAAABAAMAAAD9/wcAAAABAAMAAAAPAAcAAAAAAAUAAAAPAAYAAAAAAAQAAAAPAAUAAAAAAAQAAAAPAAQAAAAAAAMAAAARAAcAAAAHAAUAAAASAAQAAAAHAAUAAAAPAAEAAAAHAAUAAAAOAAEAAAAHAAUAAAANAAEAAAAHAAUAAAABAAMAAAAEAAgAAAD7/wcAAAABAAgAAAA=")
+tile_set = ExtResource("3_0b4ue")
+occlusion_enabled = false
 
 [node name="SlotMachine" parent="." instance=ExtResource("3_oi3di")]
-position = Vector2(582, 353)
+position = Vector2(582, 377)
