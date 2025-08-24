@@ -11,6 +11,14 @@ config_version=5
 [application]
 
 config/name="brackeys_game_jam"
+run/main_scene="uid://ctb5yr2gowu23"
+config/features=PackedStringArray("4.4", "Forward Plus")
+config/icon="res://icon.svg"
+<<<<<<<HEADrun/main_scene="res://Scenes/Effects.tscn"
+
+[autoload]
+
+Effects="*res://Scenes/Effects.tscn"
 run/main_scene="uid://nfbukqlpwn6i"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
