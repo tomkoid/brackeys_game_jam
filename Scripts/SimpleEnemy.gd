@@ -16,6 +16,11 @@ func _physics_process(delta):
 	if is_on_wall():
 		direction *= -1
 
-func _on_body_entering_hitbox(body: Node2D) -> void:
-	if not body.is_in_group("Player"): return
-	Player.get_damage(2)
+func player_in_hitbox():
+	var bodies = hitbox.get_overlapping_bodies()
+	for body in bodies:
+		if body.is_in_group("Player"): return true
+	return false
+
+func _process(_delta):
+	if player_in_hitbox(): Player.get_damage(2)

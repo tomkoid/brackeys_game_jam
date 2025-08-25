@@ -86,7 +86,7 @@ func _update_animation(input_dir: float) -> void:
 	else:
 		sprite.play("idle")
 
-var hurt_tween_duration = 0.2
+var hurt_tween_duration = 0.3
 
 func get_damage(coins_lost):
 	if invunerability: return

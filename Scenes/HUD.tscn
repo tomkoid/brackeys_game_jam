@@ -38,4 +38,4 @@ theme_override_constants/shadow_offset_x = 3
 theme_override_constants/shadow_offset_y = 2
 theme_override_fonts/font = ExtResource("2_jo1ms")
 theme_override_font_sizes/font_size = 48
-text = "000"
+text = "0"

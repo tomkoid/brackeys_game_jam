@@ -4,3 +4,5 @@
 
 [node name="Audio" type="Node"]
 script = ExtResource("1_6re4p")
+
+[node name="Music Player" type="AudioStreamPlayer" parent="."]
