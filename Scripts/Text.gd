@@ -5,23 +5,18 @@ extends CanvasLayer
 var text_start_x: int
 var text_hide_pos_y = 700
 var text_show_pos_y = 500
+var previous_text = ""
 
 func _ready():
 	text_label.modulate.a = 0
-	update_text_pos()
-	
 	text_label.position.y = text_hide_pos_y
-	get_viewport().size_changed.connect(update_text_pos)
-
-func update_text_pos():
-	var window_size = get_viewport().size
-	text_start_x = window_size.x / 2 - text_label.get_minimum_size().x / 2
-	text_label.position.x = text_start_x
-	text_hide_pos_y = window_size.y + 300
-	text_show_pos_y = window_size.y - 100
 
 func change_text(new_text):
+	previous_text = text_label.text
 	text_label.text = new_text
+
+func change_text_to_previous():
+	change_text(previous_text)
 
 const text_tween_duration = 0.4
 

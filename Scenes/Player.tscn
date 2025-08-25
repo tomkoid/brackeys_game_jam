@@ -233,8 +233,7 @@ shape = SubResource("RectangleShape2D_g2els")
 [node name="ASS2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(4.025, 4.025)
 sprite_frames = SubResource("SpriteFrames_lyrkg")
-animation = &"idle"
-frame_progress = 0.231706
+animation = &"landing"
 
 [node name="RayLeft" type="RayCast2D" parent="."]
 target_position = Vector2(-40, 0)

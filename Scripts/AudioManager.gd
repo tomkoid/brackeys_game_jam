@@ -25,17 +25,19 @@ func generate_pitch_scale(pitch_shift):
 	return max(0.01, randomPitch)
 
 func play_music(music_name):
+	music_player.stop()
 	music_player.stream = get_stream(music_name)
 	music_player.play()
+
+func get_music_remaining_time():
+	if music_player.stream == null: return 0
+	var total_length = music_player.stream.get_length()
+	var time_already_played = music_player.get_playback_position()
+	return total_length - time_already_played
 
 func get_stream(audio_name):
 	var audio_path = "res://Audio/" + audio_name + ".mp3"
 	return load(audio_path)
 
-const music_fade_out_tween_duration = 0.5
-
 func stop_music():
-	var db_tween = create_tween().tween_property(music_player, "volume_db", -50, music_fade_out_tween_duration)
-	await db_tween.finished
 	music_player.stop()
-	music_player.volume_db = 0
